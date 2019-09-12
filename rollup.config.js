@@ -7,7 +7,6 @@ import globals from 'rollup-plugin-node-globals';
 import replace from 'rollup-plugin-replace';
 import terser from 'rollup-plugin-terser';
 import serve from 'rollup-plugin-serve'
-import livereload from 'rollup-plugin-livereload'
 
 const pkg = require('./package.json');
 
@@ -57,7 +56,6 @@ export default {
 
 
         serve(), // index.html should be in root of project
-        livereload(),
         //terser()
     ],
     external: ['vyan']
