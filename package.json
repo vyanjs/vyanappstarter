@@ -1,0 +1,81 @@
+{
+    "name": "vyanappstarter",
+    "version": "1.0.0",
+    "description": "Vyanjs HelloWorld Application Starter ",
+    "keywords": [
+        "vyan",
+        "es6",
+        "router",
+        "event",
+        "binding",
+        "view",
+        "mvc"
+    ],
+    "homepage": "https://github.com/vyanjs/vyanhelloworld#readme",
+    "url": "https://npmjs.com/package/vyanjs/vyanappstarter",
+    "bugs": "https://github.com/vyanjs/vyanappstarter/issues",
+    "license": "MIT",
+    "contributors": [
+        "Gaurang Lade <glade78@gmail.com> (https://github.com/glade78)"
+    ],
+    "main": "dist/vyanappstarter.js",
+    "module": "dist/vyanappstarter.module.js",
+    "browser": "dist/vyanappstarter.min.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vyanjs/vyanappstarter.git"
+    },
+    "npmName": "vyanappstarter",
+    "npmFileMap": [
+        {
+            "basePath": "dist",
+            "files": [
+                "**/*"
+            ]
+        }
+    ],
+    "directories": {
+        "doc": "docs",
+        "lib": "dist",
+        "test": "tests"
+    },
+    "scripts": {
+        "build": "rollup -c",
+        "dev": "rollup -c --watch",
+        "reload": "livereload 'dist/'",
+        "watch": "npm-run-all --parallel reload dev",
+        "test": "echo \"No test specified\""
+    },
+    "author": "Gaurang Lade",
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-plugin-external-helpers": "^6.22.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-latest": "^6.24.1",
+        "babel-preset-stage-1": "^6.24.1",
+        "babel-register": "^6.26.0",
+        "cssnano": "^4.1.10",
+        "livereload": "^0.8.0",
+        "npm-run-all": "^3.1.2",
+        "postcss-cssnext": "^2.9.0",
+        "postcss-nested": "^1.0.0",
+        "postcss-simple-vars": "^3.0.0",
+        "rollup": "^0.63.5",
+        "rollup-plugin-babel": "^3.0.7",
+        "rollup-plugin-commonjs": "^9.1.4",
+        "rollup-plugin-eslint": "^3.0.0",
+        "rollup-plugin-livereload": "^1.0.1",
+        "rollup-plugin-node-globals": "^1.2.1",
+        "rollup-plugin-node-resolve": "^3.3.0",
+        "rollup-plugin-postcss": "^0.2.0",
+        "rollup-plugin-replace": "^1.1.1",
+        "rollup-plugin-serve": "^0.4.2",
+        "rollup-plugin-uglify": "^1.0.1",
+        "rollup-watch": "^3.0.0"
+    },
+    "engine": "node >= 8.9.4",
+    "dependencies": {
+        "vyan": "^1.0.0"
+    }
+}
