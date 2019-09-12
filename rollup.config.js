@@ -1,10 +1,11 @@
+import { rollup } from 'rollup';
 import babel from 'rollup-plugin-babel';
 import eslint from 'rollup-plugin-eslint';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import globals from 'rollup-plugin-node-globals';
 import replace from 'rollup-plugin-replace';
-import uglify from 'rollup-plugin-uglify';
+import terser from 'rollup-plugin-terser';
 import serve from 'rollup-plugin-serve'
 import livereload from 'rollup-plugin-livereload'
 
@@ -48,11 +49,8 @@ export default {
             babelrc: false,
             exclude: 'node_modules/**',
             presets: [
-                ['es2015', { "modules": false, "loose": true }]
+                ["@babel/preset-env", { "modules": false, "loose": true }]
 
-            ],
-            plugins: [
-                'external-helpers'
             ]
         }),
 
@@ -60,7 +58,7 @@ export default {
 
         serve(), // index.html should be in root of project
         livereload(),
-        //uglify()
+        //terser()
     ],
     external: ['vyan']
 
